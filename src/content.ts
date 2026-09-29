@@ -115,7 +115,7 @@ export const testimonials: Testimonial[] = [
 
 /** Links with an empty href are hidden. */
 export const socials: Social[] = [
-  { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
+  { label: "Instagram", href: "https://www.instagram.com/jovan_oosthuizen_?stkn=YmI3MzlvcWZna3Zj", icon: "instagram" },
   { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube" },
-  { label: "TikTok", href: "https://www.tiktok.com/", icon: "tiktok" },
+  { label: "TikTok", href: "https://www.tiktok.com/@its_jovan_o?_r=1&_t=ZS-9A8QL4fLELH", icon: "tiktok" },
 ];
