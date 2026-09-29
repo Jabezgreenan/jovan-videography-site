@@ -1,100 +1,118 @@
-# Jovan Oostehuizen: videographer website
+# Jovan Videography Website
 
-React, TypeScript, Tailwind CSS (v4) and Vite. A dark, cinematic one-page site.
+A modern, cinematic website designed for Jovan Oostehuizen, showcasing his videography services, creative work, and professional brand.
 
-## Run it locally
+Built with React, TypeScript, Tailwind CSS, and Vite, the website focuses on clean design, smooth navigation, and a visually engaging experience across desktop and mobile devices.
 
-You need Node.js 20 or newer (https://nodejs.org).
+## 🌐 Live Demo
 
-```bash
-npm install
-npm run dev
+[View Website](https://github.com/Jabezgreenan/jovan-videography-site)
+
+## ✨ Features
+
+* **Modern Design:** A clean, cinematic layout designed to complement a videographer's creative brand.
+* **Responsive Layout:** Optimized for desktop, tablet, and mobile devices.
+* **Portfolio Showcase:** A dedicated space to present videography projects and creative work.
+* **Services Section:** Highlights videography services and offerings.
+* **Contact Section:** Makes it easy for potential clients to get in touch.
+* **Reusable Components:** Built with React components for maintainable and scalable code.
+* **Type Safety:** TypeScript helps improve code reliability and maintainability.
+* **Utility-First Styling:** Tailwind CSS provides a consistent and responsive styling system.
+
+## 🛠️ Built With
+
+* React
+* TypeScript
+* Tailwind CSS
+* Vite
+* HTML5
+* CSS3
+* JavaScript
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+* [Node.js](https://nodejs.org/)
+* npm (included with Node.js)
+* Git
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Jabezgreenan/jovan-videography-site.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd jovan-videography-site
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal to view the website.
+
+## 📁 Project Structure
+
+The project follows a component-based React structure.
+
+```text
+jovan-videography-site/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-Open the address it prints (usually http://localhost:5173). Changes show up as you save.
+*Note: The structure above is an example of a typical project layout. Your actual repository may differ.*
 
-```bash
-npm run build     # type-checks and builds the site into /dist
-npm run preview   # serves the built site so you can check it
-```
+## 💻 Available Scripts
 
-## Change the content
+| Command           | Description                       |
+| ----------------- | --------------------------------- |
+| `npm run dev`     | Starts the development server     |
+| `npm run build`   | Builds the project for production |
+| `npm run preview` | Previews the production build     |
 
-Almost everything you will want to edit is in **src/content.ts**:
+## 🎯 Project Purpose
 
-| Export         | What it controls                                             |
-| -------------- | ------------------------------------------------------------ |
-| `site`         | name, headline, intro, email, phone, location                |
-| `images`       | the four big photos: hero, about, showreel, contact          |
-| `showreel`     | the "Watch My Work" video                                    |
-| `about`        | bio text and the three highlights                            |
-| `services`     | the four service cards                                       |
-| `projects`     | the six tiles under "Selected Projects"                      |
-| `testimonials` | client quotes (delete them all to hide the section)          |
-| `socials`      | footer icons (an empty `href` hides one)                     |
+This project was created to develop a professional online presence for a videographer, allowing potential clients to explore his work, learn about his services, and connect with him.
 
-The email, phone number, location and testimonials were copied from the design mockup. **The testimonials are not real.** Replace them with genuine quotes or remove them before launch.
+It also demonstrates practical experience with modern frontend development technologies, responsive design, reusable React components, and TypeScript.
 
-### Add photos
+## 👨‍💻 Developer
 
-Copy images into `public/media/` and point to them from `content.ts`:
+**Jabez Greenan**
 
-```ts
-export const images = {
-  hero: "/media/hero.jpg",
-  about: "/media/jovan.jpg",
-  showreel: "/media/showreel-bg.jpg",
-  contact: "/media/contact-bg.jpg",
-};
-```
+* GitHub: [@Jabezgreenan](https://github.com/Jabezgreenan)
+* LinkedIn: [Jabez Greenan](https://www.linkedin.com/in/jabez-greenan-60b434271/)
+* Portfolio: [Personal Portfolio](https://personal-site-js.netlify.app/)
 
-Any path left empty shows a drawn placeholder landscape instead. For the hero, a photo with the subject on the right works best, because the text sits on the left.
+---
 
-For a project, set `thumb: "/media/night-drive.jpg"` (16:9, at least 1200px wide).
-
-### Add videos
-
-Link a hosted video or use a file. Both open in a pop-up when someone clicks.
-
-```ts
-// Hosted on Vimeo or YouTube (use the embed link, not the normal page link)
-embedUrl: "https://player.vimeo.com/video/123456789",
-
-// Or a file you put in public/media
-videoSrc: "/media/night-drive.mp4",
-```
-
-The showreel takes the same two options in the `showreel` export.
-
-## Change the look
-
-Colours and the font are defined at the top of **src/index.css**, inside `@theme`. Class names such as `bg-night`, `bg-surface` and `text-glow` come from those names.
-
-Shared spacing and type styles (section widths, small headings, buttons, cards) are in **src/ui.ts**, so a change there updates every section.
-
-The font is Outfit, installed through npm so the site works offline. To swap it, install another `@fontsource-variable/...` package, change the `@import` line in `index.css` and update `--font-sans`.
-
-## Contact form
-
-The form opens the visitor's email app with the message filled in, so it needs no server. To have it send messages directly instead, replace the `window.location.href = ...` line in `src/components/Contact.tsx` with a request to a form service such as Formspree or Netlify Forms.
-
-## Put it online
-
-Run `npm run build`, then upload the `dist` folder to any static host (Netlify, Vercel, Cloudflare Pages, GitHub Pages). Before launch, check the page title and description in `index.html`.
-
-## Project layout
-
-```
-src/
-  content.ts        all editable text and project data
-  types.ts          TypeScript types for that data
-  ui.ts             shared class names
-  index.css         Tailwind import, colours, font
-  App.tsx           page order and the video pop-up
-  components/       Header, Hero, About, Showreel, Services, Work, Testimonials, Contact, Footer
-                    Scene (placeholder landscape), Icon, VideoModal
-  hooks/            useActiveSection (highlights the current link in the menu)
-public/
-  media/            your photos and videos
-  favicon.svg
-```
+⭐ If you like this project, consider giving the repository a star!
