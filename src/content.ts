@@ -14,7 +14,7 @@ export const site = {
     "I'm a videographer based in South Africa, creating high-quality, cinematic content for brands, businesses, events and individuals.",
   /** The contact form opens the visitor's email app addressed to this email. */
   email: "jovan.oosthuizen@gmail.com",
-  phone: "+27 72 123 4567",
+  phone: "+27 66 332 6986",
   location: "Kimberley, Northern Cape, South Africa",
   /** Link for "View All Projects" (a Vimeo or YouTube page). Leave empty to hide the link. */
   allWorkUrl: "https://vimeo.com/",
