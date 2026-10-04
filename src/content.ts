@@ -35,7 +35,7 @@ export const showreel = {
   heading: "Watch My Work",
   text: "A collection of recent projects, showcasing my style, technique and storytelling.",
   /** A video file in /public/media, e.g. "/media/showreel.mp4". */
-  videoSrc: "",
+  videoSrc: "/media/showreel.mp4",
   /** Or a YouTube / Vimeo embed link. */
   embedUrl: "",
 };
