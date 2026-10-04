@@ -25,8 +25,8 @@ export const site = {
  * Suggested sizes: hero 2400x1400, about 1200x1000, showreel 2400x900, contact 2400x1200.
  */
 export const images = {
-  hero: "",
-  about: "",
+  hero: "public/media/hero.png",
+  about: "", 
   showreel: "",
   contact: "",
 };
