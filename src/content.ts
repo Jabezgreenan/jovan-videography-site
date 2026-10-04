@@ -27,7 +27,7 @@ export const site = {
 export const images = {
   hero: "/media/hero.png",
   about: "/media/jovan.png", 
-  showreel: "/media/showreel.mp4",
+  showreel: "",
   contact: "",
 };
 
