@@ -26,7 +26,7 @@ export const site = {
  */
 export const images = {
   hero: "/media/hero.png",
-  about: "", 
+  about: "/media/jovan.png", 
   showreel: "",
   contact: "",
 };
